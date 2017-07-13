@@ -3,16 +3,14 @@ var loremIpsum = require('lorem-ipsum')
 var application = express();
 
 application.get("/", (request, response) => {
-   response.send('lorem-ipsum'){
+   response.send('loremIpsum'({
         count: 3,                     
         units: 'paragraphs',           
         format: 'html',
-    })
-};
+    }))
+});
 
-// application.post('/', (request, response) => {
-//     response.render('index');
-// });
+application.listen(3000);
 
 
 // output = loremIpsum({
