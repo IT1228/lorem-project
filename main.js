@@ -3,10 +3,10 @@ var loremIpsum = require('lorem-ipsum')
 var application = express();
 
 application.get("/", (request, response) => {
-   response.send('loremIpsum'({
+   response.send(loremIpsum({
         count: 3,                     
         units: 'paragraphs',           
-        format: 'html',
+        format: 'html'
     }))
 });
 
